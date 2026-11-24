@@ -7,10 +7,18 @@ import {
 } from "./videos/demo/Bridge";
 import { DemoCaptionOverlay } from "./videos/demo/DemoCaptionOverlay";
 import { DemoCaptionsOnly } from "./videos/demo/CaptionsOnly";
+import { DuaTiketShort, DuaTiketWithSubtitles, DUATIKET_FRAMES } from "./videos/duatiket/Bridge";
+import { DuaTiketSubtitles } from "./videos/duatiket/Subtitles";
 
 export const Root: React.FC = () => {
   return (
     <>
+      <Folder name="DuaTiket">
+        <Composition id="DuaTiket" component={DuaTiketShort} durationInFrames={DUATIKET_FRAMES} fps={30} width={1080} height={1920} />
+        <Composition id="DuaTiketWithSubtitles" component={DuaTiketWithSubtitles} durationInFrames={DUATIKET_FRAMES} fps={30} width={1080} height={1920} />
+        <Composition id="DuaTiketSubtitles" component={DuaTiketSubtitles} durationInFrames={DUATIKET_FRAMES} fps={30} width={1080} height={1920} />
+        <Composition id="DuaTiketSubtitlesGreen" component={() => <DuaTiketSubtitles bg="#00FF00" />} durationInFrames={DUATIKET_FRAMES} fps={30} width={1080} height={1920} />
+      </Folder>
       <Folder name="Demo">
         <Composition
           id="DemoShort"
