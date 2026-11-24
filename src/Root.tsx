@@ -16,6 +16,7 @@ export const Root: React.FC = () => {
       <Folder name="DuaTiket">
         <Composition id="DuaTiket" component={DuaTiketShort} durationInFrames={DUATIKET_FRAMES} fps={30} width={1080} height={1920} />
         <Composition id="DuaTiketWithSubtitles" component={DuaTiketWithSubtitles} durationInFrames={DUATIKET_FRAMES} fps={30} width={1080} height={1920} />
+        <Composition id="DuaTiketSubtitles" component={DuaTiketSubtitles} durationInFrames={DUATIKET_FRAMES} fps={30} width={1080} height={1920} />
         <Composition id="DuaTiketSubtitlesGreen" component={() => <DuaTiketSubtitles bg="#00FF00" />} durationInFrames={DUATIKET_FRAMES} fps={30} width={1080} height={1920} />
       </Folder>
       <Folder name="Demo">
